@@ -47,6 +47,9 @@ digitosOperacionais.map((el) => {
             return
         
         // Outro caso adiciona
+        }else if (valores.length == 0){
+            return 
+            
         }else{
             valores.push(evt.target.textContent);
         }
