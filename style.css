@@ -82,7 +82,13 @@ body{
         width: 100vw;
         height: 100vh;
         border-radius: 0;
+        min-width: 100vw;
         
+    }.display{
+        width: 95%;
+    }
+    .containerDigitos{
+        width: 95%;
     }
     
 }
