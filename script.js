@@ -40,14 +40,19 @@ digitosOperacionais.map((el) => {
     el.addEventListener("click", function(evt) {
         // Se o ultimo valor do array for sinal e o usuario clicou em outro, substitui
         if (['*','-','+','/'].includes(valores[valores.length -1])){
-            valores[valores.length -1] = evt.target.textContent;
+            if (valores.length==1 && valores[valores.length -1] == "-"){
+                return
+
+            }else{
+                valores[valores.length -1] = evt.target.textContent;
+            }
         
         // se . for o ultimo valor do array retorna
         }else if(valores[valores.length -1] =='.'){
             return
         
-        // Outro caso adiciona
-        }else if (valores.length == 0){
+        // metodo para apenas conseguir enserir o sinal de menos no inicio
+        }else if (valores.length == 0 && evt.target.textContent!="-"){
             return 
             
         }else{
